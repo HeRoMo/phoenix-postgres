@@ -24,8 +24,8 @@ config :<app name>, Hello.Repo,
   username: "postgres",
   password: "postgres",
   database: "<app name>_dev",
-  - hostname: "localhost",
-  + hostname: "postgres",
+- hostname: "localhost",
++ hostname: "postgres",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 ```
