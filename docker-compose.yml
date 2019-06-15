@@ -1,0 +1,24 @@
+version: '3'
+services: 
+  postgres:
+    image: postgres:10.7
+    environment: 
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  phoenix:
+    build: .
+    image: elixir-phoenix:latest
+    volumes:
+      - .:/app
+    ports:
+      - 4000:4000
+    working_dir: /app
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+    driver: local
