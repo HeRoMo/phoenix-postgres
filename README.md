@@ -8,14 +8,14 @@ Docker Compose of Phoenix Framework for development.
 
 ## Usage
 
-### Use docker-compose
+### Using `docker-compose`, directly
 #### Install Phoenix
 ```console
 $ docker-compose up -d
 $ docker-compose run --rm phoenix mix phx.new <app name>
 ```
 
-#### Modify database host
+#### Modify database hostname
 
 Change hostname in *<app name>/config/dev.exs*
 
@@ -42,7 +42,7 @@ $ docker-compose exec phoenix /bin/bash
 
 Open http://localhost:4000 in your browser
 
-### VS Code with Remote - Containers extension
+### Using VS Code with Remote - Containers extension
 
 You can use VS Code and [Remote \- Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
 
